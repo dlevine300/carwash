@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Pristine Car Wash</title>
+  <!-- add icon link -->
+  <link rel="icon" href="images/logo-central-coffee_sm.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Bitter|Lato" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+
+
+<header class="header">
+   <div class="wrapper">
+       <!-- Logo Section -->
+       <div class="header__logo" style="flex: 1; display: flex; justify-content: flex-start;">
+           <a href="#home">
+               <img src="images/pristine-car-wash-logo.png" alt="Pristine Car Wash Logo" style="height: 100px; width: auto;">
+           </a>
+       </div>
+       <!-- Navigation Links -->
+       <nav class="header__nav" style="flex: 2; display: flex; justify-content: center; align-items: center;">
+           <a class="header__nav-item" data-tab href="index.html">Home</a>
+           <a class="header__nav-item" data-tab href="#about.html">About</a>
+           <a class="header__nav-item" data-tab href="#services.html">Services</a>
+           <a class="header__nav-item" data-tab href="#reservations.html">Reservations</a>
+           <a class="header__nav-item" data-tab href="#location.html">Location</a>
+           <a class="header__nav-item" data-tab href="#contact.html">Contact</a>
+       </nav>
+       <!-- Hamburger Menu for Mobile -->
+       <a id="btnOpen" class="header__open">
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+       </a>
+   </div>
+</header>
+<style>
+   /* Header background and layout */
+   .header {
+       background-color: #9a1607; /* Light blue background color for header */
+       padding: 10px 20px; /* Reduced padding */
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       height: 100px; /* Header height set to 100px */
+   }
+   /* Logo styling */
+   .header__logo img {
+       height: 100px; /* Logo size adjusted to 100px height */
+       width: auto;
+   }
+   /* Navigation menu layout */
+   .header__nav {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   /* Individual menu items */
+   .header__nav-item {
+       color: #fff;  /* White text color */
+       text-decoration: none; /* Remove underline from links */
+       margin: 0 20px; /* Space between menu items */
+       font-size: 16px; /* Adjust font size */
+       font-family: 'Lato', sans-serif; /* Ensure font consistency */
+       transition: color 0.3s ease; /* Smooth transition for color change */
+   }
+   /* Hover effect for menu items */
+   .header__nav-item:hover {
+       color: #0645c4;
+   }
+   /* Mobile menu hamburger icon styling */
+   .header__open span {
+       background-color: #fff; /* White color for the hamburger icon */
+       height: 4px; /* Height of each line */
+       width: 30px; /* Slightly wider hamburger icon */
+       margin: 5px 0; /* Added space between lines */
+       transition: 0.3s;
+   }
+   /* Media Query for mobile screens */
+   @media (max-width: 768px) {
+       .header__nav {
+           display: none;
+           flex-direction: column;
+           position: absolute;
+           top: 50px;
+           left: 0;
+           width: 100%;
+           background-color: #9a1607;
+           padding: 20px;
+           box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+       }
+       .header__nav-item {
+           margin: 10px 0; /* Space out items vertically */
+           text-align: center;
+           font-size: 18px; /* Larger font size for mobile */
+       }
+       #btnOpen {
+           display: block;
+           cursor: pointer;
+           z-index: 999; /* Ensure it sits above other elements */
+       }
+       #btnOpen.active + .header__nav {
+           display: flex;
+       }
+   }
+</style>
+<script>
+   // Toggle the mobile menu
+   const btnOpen = document.getElementById('btnOpen');
+   const nav = document.querySelector('.header__nav');
+
+   btnOpen.addEventListener('click', function() {
+       btnOpen.classList.toggle('active');
+       nav.classList.toggle('active');
+   });
+</script>
+
+
+  <style>
+      /* Header background and layout */
+      .header {
+          background-color: #9a1607; /* Light blue background color for header */
+          padding: 20px 0; /* Add padding to the header */
+      }
+       /* Navigation menu layout */
+      .header__nav {
+          display: flex;
+          justify-content: center; /* Centers the menu items horizontally */
+      }
+       /* Individual menu items */
+      .header__nav-item {
+          color: #fff;  /* White text color */
+          text-decoration: none; /* Remove underline from links */
+          margin: 0 20px; /* Space between menu items */
+          font-size: 16px; /* Adjust font size */
+          font-family: 'Lato', sans-serif; /* Ensure font consistency */
+          transition: color 0.3s ease; /* Smooth transition for color change */
+      }
+       /* Hover effect for menu items */
+      .header__nav-item:hover {
+          color: #0645c4;
+      }
+       /* Logo styling */
+      .header__image {
+          width: auto;
+          height: 50px; /* Adjust logo size */
+      }
+       /* Mobile menu hamburger icon styling */
+      .header__open span {
+          background-color: #fff; /* White color for the hamburger icon */
+      }
+  </style>
+
+  <aside id="offcanvas" class="offcanvas">
+      <div class="offcanvas__content">
+          <a id="btnClose" class="offcanvas__close">
+              <span></span>
+              <span></span>
+          </a>
+          <a class="offcanvas__item" data-scroll href="#home">Home</a>
+          <a class="offcanvas__item" data-scroll href="#services">Services</a>
+          <a class="offcanvas__item" data-scroll href="#reservations">Reservations</a>
+          <a class="offcanvas__item" data-scroll href="#location">Location</a>
+      </div>
+  </aside>
+
+
+
+
+  <main>
+      <article>
+
+
+
+
+      <!-- Home Section -->
+      <section id="home" class="block -fullwidth" style="background-image: url('images/pristinecarwash.jpeg'); background-size: cover; background-position: center center; height: 100vh;">
+          <div class="overlay" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+          <div class="block__content text-center" style="position: relative; z-index: 2; color: white; padding: 20px;">
+              <h1>Pristine Car Wash</h1>
+              <h2 class="text-white">Turn Heads With Every Wash</h2>
+          </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

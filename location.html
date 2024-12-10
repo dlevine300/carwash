@@ -1,0 +1,128 @@
+
+
+<!-- Location Section -->
+<section id="location" class="block__wrapper" style="background-color:#FFFFFF;">
+  <div class="block">
+      <div class="block__content -text">
+          <h2>Location</h2>
+          <!-- Address Section - Simple text above the map -->
+          <p style="color: black; font-size: 16px; margin-bottom: 10px;">
+              1500 Willow Ave, Hoboken, New Jersey
+          </p>
+          <div class="grid">
+              <!-- Map Section -->
+              <div class="grid__item map">
+                  <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.3090705136037!2d-74.03218912397209!3d40.755226471387246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259d623f6988b%3A0xeb07de546600145f!2s1500%20Willow%20Ave%2C%20Hoboken%2C%20NJ%2007030!5e0!3m2!1sen!2sus!4v1733182643374!5m2!1sen!2sus"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+              </div>
+
+
+
+
+              <!-- Business Hours Section -->
+              <div class="grid__item">
+                  <header class="location-header">Hours</header>
+                  <div class="grid__content">
+                      <p class="hours-text">
+                          Monday - Thursday: 7:00 AM - 8:00 PM<br>
+                          Friday - Sunday: 8:00 AM - 10:00 PM
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+      <style>
+          /* Scoped styles for #location */
+          #location {
+              background-color: #d2d0d0;  /* Match the footer's black color */
+              color: #000; /* Ensure text is white for readability */
+          }
+
+
+
+
+          #location .block__wrapper {
+              padding: 20px;
+          }
+
+
+
+
+          #location .block {
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+          }
+
+
+
+
+          #location .grid {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 20px;
+          }
+
+
+
+
+          #location .grid__item {
+              background-color: #d2d0d0; /* Slightly lighter black for grid items */
+              border-radius: 8px;
+              padding: 20px;
+              box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          }
+
+
+
+
+          /* Specific rule for 'Hours' header to make it black */
+          .location-header {
+              color: #000;  /* Black color for 'Hours' header */
+          }
+
+
+
+
+          /* Make the actual business hours text black */
+          .hours-text {
+              color: #000; /* Black color for the hours text */
+              font-size: 1.1em;
+              line-height: 1.5;
+          }
+
+
+
+
+          /* Media Query for larger screens */
+          @media (min-width: 1024px) {
+              #location .grid {
+                  grid-template-columns: 1fr 1fr;
+                  justify-content: space-between;
+              }
+
+
+
+
+              #location .grid__item {
+                  flex: 1;
+              }
+
+
+
+
+              #location .grid__item.map {
+                  max-width: 100%;
+              }
+          }
+      </style>
